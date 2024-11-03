@@ -37,17 +37,25 @@ agent = create_structured_chat_agent(
 )
 agent_executor = AgentExecutor(agent=agent, tools=playwright_tools)
 
-# # input
-# response  = agent_executor.invoke({ "input": "Follow count of a user from github, username 'siam1113'"})
+# input 1
+# response  = agent_executor.invoke({ "input": "Follow count of a user from github, username 'siam1113'"}, config=my_config)
+response  = agent_executor.invoke({ "input": "Hi This is Siam Hasan"})
 
-# # output
-# print(response)
+# output 1
+print(response)
 
-# streaming messages
-for chunk in agent_executor.stream(
-     {"input": [HumanMessage(content="Follow count of a user from github, username 'siam1113")]}
-):
-    print(chunk)
-    print("----")
+# input 2
+# response  = agent_executor.invoke({ "input": "What is the github username I have provided you ?"}, config=my_config)
+response  = agent_executor.invoke({ "input": "What is my last name ?"})
+
+# output 2
+print(response)
+
+# # streaming messages
+# for chunk in agent_executor.stream(
+#      {"input": [HumanMessage(content="Follow count of a user from github, username 'siam1113")]}
+# ):
+#     print(chunk)
+#     print("----")
 
 
