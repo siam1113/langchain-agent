@@ -17,7 +17,7 @@ load_dotenv()
 # How to Load Web page
 # Link: https://python.langchain.com/docs/how_to/document_loader_web/
 '''
-url = "http://automaniech.com"
+url = "https://codebasics.io"
 loader = WebBaseLoader(web_paths=[url])
 docs = []
 for doc in loader.lazy_load():
@@ -57,5 +57,5 @@ agent = create_react_agent(llm, tools, checkpointer=memory)
 res = agent.invoke({"messages": [HumanMessage(content="hi I am Siam.")]}, config)
 print(res["messages"][-1].pretty_print())
 
-res = agent.invoke({"messages": [HumanMessage(content="what's the tagline ?")]}, config)
+res = agent.invoke({"messages": [HumanMessage(content="Total Paid Learners ?")]}, config)
 print(res["messages"][-1].pretty_print())
