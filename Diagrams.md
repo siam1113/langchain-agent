@@ -1,1 +1,0 @@
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f11cabbf-53b2-4f08-933f-50acbd307fa0/c45b1408-bdd4-4621-9ecf-c07a9fce4e82/image.png)
